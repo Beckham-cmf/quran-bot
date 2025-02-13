@@ -38,6 +38,10 @@ def get_progress(message):
         bot.send_message(user_id, f"📖 تقدمك الحالي:\n{surah} - آية {ayah}")
     else:
         bot.send_message(user_id, "❌ لم تسجل أي تقدم بعد! \n\n أرسل السورة والآية.")
+import logging
 
+logging.basicConfig(level=logging.DEBUG)
+
+bot.polling(none_stop=True)
 # تشغيل البوت
 bot.polling(none_stop=True)
